@@ -1,3 +1,4 @@
+import { Box, Button, Center, TextInput } from "@mantine/core";
 import { useNavigate } from "react-router-dom"
 
 function Login() {
@@ -9,10 +10,13 @@ function Login() {
   }
 
   return (
-    <div>
-      <div>Login page</div>
-      <div><button onClick={submit}>Login</button></div>
-    </div>
+    <Box sx={{ maxWidth: 300 }} mx="auto">
+    <form onSubmit={submit}>
+      <TextInput mt="md" label="メールアドレス" type="mail" />
+      <TextInput mt="md" label="パスワード" type="password" />
+      <Center><Button mt="md">ログイン</Button></Center>
+    </form>
+    </Box>
   )
 }
 
